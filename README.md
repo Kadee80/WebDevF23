@@ -10,7 +10,7 @@
 
 **Fall 2023 – Professor Kathryn Adee**
 
-#### Section A
+#### Section D
 
 _Monday/Wednesday 8:00 AM – 9:50AM; 370 Jay St Room 309 Loc: Brooklyn Campus_
 

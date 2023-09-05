@@ -157,8 +157,8 @@ git commit -m "Initial Commit, In class exercise"
 
 Finally, we need to `push` our local repos changes to our GitHub repository.
 
-```
-git push origin master
+```gi
+git push
 ```
 
 Take a look at your online repo. It should match your local computers if you used ` git add` `git commit` and `git push` correctly.
@@ -183,7 +183,8 @@ git init
 git add .
 git commit -m "initial commit"
 git remote add origin https://github.com/USERNAME/REPONAME.git
-git remote -v
+git branch -M main
+git push -u origin main
 
 ```
 
