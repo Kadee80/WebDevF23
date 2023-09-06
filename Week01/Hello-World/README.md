@@ -27,7 +27,7 @@
 
 - Git is a widely used version control software which we can access via the command line of our computers. First, lets install Git on our computers.
 
-  - [Install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+  - [Install Git](https://github.com/git-guides/install-git)
 
 - GitHub is a web-based Git repository hosting service. You can use it as a backup of your git repositories, or to collaborate as a team on a project. We will be using it to keep track of our in class, and homework files.
 
