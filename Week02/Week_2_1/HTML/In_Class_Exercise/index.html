@@ -1,11 +1,87 @@
 <!DOCTYPE html>
+<!-- Declare HTML doctype for file -->
 <html lang="en">
   <head>
+    <!-- Character set sttribute specifies character encoding.
+    Failure to state this may result in malformed font characters -->
     <meta charset="utf-8" />
+    <!-- Viewport metatag is required for proper responsive rendering -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Title tag is the first thing you see as google search result and the title in the broswer tab -->
     <title>HTML Elements</title>
+    <meta
+      name="description"
+      content="This is a description tag, this will show up as the text under the title/link in a google search result"
+    />
+    <meta name="keywords" content="HTML, CSS, tutorial" />
+    <meta name="author" content="your name here" />
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <!-- There should only ebver be one heading 1 per page. This should title the page. Google search will weight this text with the most importance -->
+    <h1 id="top">Hello, world!</h1>
+    <h2>this is a heading 2</h2>
+    <h3>this is a heading 3</h3>
+    <h4>this is a heading 4</h4>
+    <h5>this is a heading 5</h5>
+    <h6>this is a heading</h6>
+
+    <p>
+      This is a page with some <em>basic HTML</em> elements. We will update and
+      add as we <strong>progress</strong> in this lesson
+    </p>
+    <!-- there are some tags that are self closing like br and hr and img -->
+    <hr />
+    <p>
+      Some text to insert <br />
+      a break tag into.
+    </p>
+    <!-- Ordered lists -->
+    <ol>
+      <li>item 1</li>
+      <li>item 2</li>
+      <li>item 3</li>
+    </ol>
+
+    <!-- Unordered lists -->
+    <ul>
+      <li>item 1</li>
+      <li>item 2</li>
+      <li>item 3</li>
+    </ul>
+    <!--  We can also nest lists -->
+    <ol>
+      <li>item 1</li>
+      <li>
+        item 2
+        <ol>
+          <li>Sub item 1</li>
+          <li>Sub item 2</li>
+          <li>Sub item 3</li>
+        </ol>
+      </li>
+      <li>item 3</li>
+    </ol>
+    <!-- We can link to external pages or websites -->
+    <a href="https://sallysbakingaddiction.com/zucchini-bread/" target="_blank"
+      >Link to external page in new window</a
+    >
+    <br />
+    <a href="https://sallysbakingaddiction.com/zucchini-bread/" target="_self"
+      >Link to external page in the same window</a
+    >
+    <!-- We can also link to other areas by ID on our page -->
+    <a href="#top">Back to top</a>
+
+    <!-- we can load images from the browser -->
+    <br />
+    <img
+      src="https://sallysbakingaddiction.com/wp-content/uploads/2017/07/easy-zucchini-bread-265x265.jpg"
+    />
+    <!-- load a image from our website image directory -->
+    <img
+      src="img/local-goat.jpg"
+      title="goat on a stump"
+      alt="goat on a stump. goats stand on stumps when they are happy."
+    />
   </body>
 </html>
