@@ -41,13 +41,13 @@ Now at this point, we can and should continue to think about how individual reci
 
 Also, it is worth noting that these diagrams can be made with any software you are comfortable with. You could use keynote, powerpoint, balsamiq or another wire framing software. Even illustrator or photoshop are good options, but remember – the information architecture of your site map is more important than the color of the box around the text! You can also sketch these out if you are more comfortable with that as a first step. A text only outline is also helpful for many reasons. Its also super quick!
 
-##HOME
+## HOME
 ---
-###ABOUT
-###CONACT
-###RECIPES
+### ABOUT
+### CONACT
+### RECIPES
 ---
-####Breakfast
+#### Breakfast
 * Vegetarian
 * Poultry
 * Fish
@@ -57,7 +57,7 @@ Also, it is worth noting that these diagrams can be made with any software you a
 
 ---
 
-####Lunch
+#### Lunch
 * Vegetarian
 * Poultry
 * Fish
@@ -66,7 +66,7 @@ Also, it is worth noting that these diagrams can be made with any software you a
 
 ---
 
-####Dinner
+#### Dinner
 * Vegetarian
 * Poultry
 * Fish
@@ -75,7 +75,7 @@ Also, it is worth noting that these diagrams can be made with any software you a
 
 ----
 
-####Dessert
+#### Dessert
 * Dairy
 * Baked Goods
 * Chocolate
