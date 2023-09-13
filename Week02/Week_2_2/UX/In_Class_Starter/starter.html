@@ -10,14 +10,123 @@
     />
     <meta name="keywords" content="HTML, Semantic HTML, Tutorial" />
     <meta name="author" content="NYU" />
+    <style type="text/css">
+      /*Tag or Element Selector*/
+      h1 {
+        font-family: 'Verdana', sans-serif;
+      }
+
+      /*Class Selector*/
+      .profile-photo {
+        border: 1px solid rgb(65, 243, 11);
+        width: 200px;
+        height: 200px;
+      }
+
+      /*Id Selector*/
+      #info {
+        margin: 0 auto;
+        text-align: right;
+        background-color: rgba(100, 100, 100, 0.5);
+      }
+    </style>
   </head>
 
   <body>
     <!-- Here is some starter content. We will mark this up to contain a header, nav, article, section, aside, footer and more! Bonus points if you use even more semantic HTML elements in your HW this week. -->
     <!-- We will be marking this up as our main menu -->
-    Online Store Home New Arrivals Accessories Clothing Footwear Boots Sandals
-    Flip Flops Flats Heels Sneakers Cross Trainers Running Fashion Slip Ons
-    Sneakers IMAGE HERE This is a shoe, I swear $70 Shoe #1 © Shoe Store 2016
-    facebook twitter
+    <header>
+      <h1>Online Store</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">New Arrivals</a></li>
+          <li><a href="#">Accessories</a></li>
+          <li><a href="#">Clothing</a></li>
+          <li><a href="#">Footwear</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <aside>
+      <nav>
+        <ul>
+          <li><a href="#">Boots</a></li>
+          <li><a href="#">Sandals</a></li>
+          <li><a href="#">Flip Flops</a></li>
+          <li><a href="#">Flats</a></li>
+          <li><a href="#">Heels</a></li>
+          <li>
+            <a href="#">Sneakers</a>
+            <ul>
+              <li><a href="#" target="_self">Cross Trainers</a></li>
+              <li><a href="#">Running</a></li>
+              <li><a href="#">Fashion</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <main>
+      <!-- individual image with a caption using figure and figcaption -->
+      <figure>
+        <img src="https://placehold.co/300x300" class="profile-photo" />
+        <figcaption>
+          <em>This is a shoe, I swear</em>
+          <br />
+          <strong>$70</strong>
+          <br />
+          <a href="#">Shoe #1</a>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <img src="https://placehold.co/300x300" class="profile-photo" />
+        <figcaption>
+          <em>This is a shoe, I swear</em>
+          <br />
+          <strong>$70</strong>
+          <br />
+          <a href="#">Shoe #1</a>
+        </figcaption>
+      </figure>
+
+      <figure id="info">
+        <img src="https://placehold.co/300x300" />
+        <figcaption>
+          <em>This is a shoe, I swear</em>
+          <br />
+          <strong>$70</strong>
+          <br />
+          <a href="#">Shoe #1</a>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <img src="https://placehold.co/300x300" />
+        <figcaption>
+          <em>This is a shoe, I swear</em>
+          <br />
+          <strong>$70</strong>
+          <br />
+          <a href="#">Shoe #1</a>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <img src="https://placehold.co/300x300" />
+        <figcaption>
+          <em>This is a shoe, I swear</em>
+          <br />
+          <strong>$70</strong>
+          <br />
+          <a href="#">Shoe #1</a>
+        </figcaption>
+      </figure>
+    </main>
+    <footer>
+      © Shoe Store 2016 <a href="#" target="_blank">facebook</a>
+      <a href="#">twitter</a>
+    </footer>
   </body>
 </html>
