@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Layout 2: Full width header and footer, 3 equal columns</title>
+
+    <style type="text/css">
+      /* transparent blue bg, and minimum height so we can keep track of our divs and semantic markup elements without having to add content. */
+
+      div,
+      header,
+      footer,
+      section,
+      aside,
+      article,
+      main {
+        min-height: 100px;
+        /* RGBA color, red, green, blue (0-255) and alpha (0-1) */
+        background-color: rgba(0, 100, 255, 0.2);
+      }
+
+      main {
+        width: 960px;
+        margin: 0 auto;
+      }
+      /* Adds block empty content with zero height that will clear out both sides avoiding our wrapping issues. Use this class for the container element  */
+
+      .clearfix:after {
+        display: block;
+        clear: both;
+        /* To ensure cross browser and legacy compatibility */
+        height: 0;
+        font-size: 0;
+        content: ' ';
+        /* one last fallback */
+        visibility: hidden;
+      }
+
+      header,
+      footer {
+        width: 100%;
+      }
+      /* Descendant Selector for more CSS Specificity */
+
+      article.col-pixels section {
+        /* 960px container - 6*10px marigin / 3 */
+        width: 300px;
+        margin: 0 10px;
+        float: left;
+      }
+
+      article.col-fluid section {
+        /* 100% browser width - 8*2.5% marigin / 4 */
+        width: 20%;
+        margin: 2.5%;
+        float: left;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- in this example, the header and footer are not included in the wrapper element -->
+    <header>
+      A header element with width 100%. We will cover menu in other examples!
+    </header>
+    <main>
+      <h1>Main Content Article 1 - Pixel Based</h1>
+      <article class="col-pixels clearfix">
+        <h2>Article with 3 vertical sections.</h2>
+        <section>
+          <h3>Section 1</h3>
+        </section>
+        <section>
+          <h3>Section 2</h3>
+        </section>
+        <section>
+          <h3>Section 3</h3>
+        </section>
+      </article>
+    </main>
+    <!-- Fluid Layout using % -->
+    <h1>Article 2 - Percent Based, no wrapper</h1>
+    <p>
+      note that this article is outside our main element - which has a set pixel
+      width
+    </p>
+    <article class="col-fluid clearfix">
+      <h2>Article with 4 fluid width vertical sections.</h2>
+      <section>
+        <h3>Section 1</h3>
+      </section>
+      <section>
+        <h3>Section 2</h3>
+      </section>
+      <section>
+        <h3>Section 3</h3>
+      </section>
+      <section>
+        <h3>Section 4</h3>
+      </section>
+    </article>
+    <!-- resize your browser to see the difference between the 2 layouts -->
+    <footer>
+      <h3>Some footer text</h3>
+    </footer>
+  </body>
+</html>

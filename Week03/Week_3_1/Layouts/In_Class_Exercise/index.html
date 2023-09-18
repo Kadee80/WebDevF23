@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Layout 1</title>
+    <style type="text/css">
+      body {
+        margin: 0;
+      }
+      /* transparent blue BG and min height so we can keep track
+      of our divs and semantic markup element without having to add context */
+      /* tag selector */
+      div,
+      header,
+      footer,
+      section,
+      aside,
+      main {
+        min-height: 100px;
+        /* RGBA red green blue alpha 0-1 */
+        background-color: rgba(0, 100, 255, 0.2);
+      }
+
+      div.wrapper {
+        width: 900px;
+        /* use margin 0 auto to cetner our wrapper div within our browser window */
+        margin: 0 auto;
+        /* margin-top: 1rem; */
+        /* add a little bit of padding so we can see hoe child elements stack more clearly */
+        padding: 30px;
+        /* shorthand for border dimension, styles, color */
+        border: 2px solid red;
+      }
+
+      article {
+        width: 600px;
+        float: left;
+      }
+
+      aside {
+        width: 300px;
+        float: left;
+        height: 400px;
+        background-color: rgba(255, 0, 0, 0.1);
+      }
+
+      .clearfix {
+        height: 0;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        A header element with width of 100%. We will cover menu layouts in
+        another example!
+      </header>
+      <main>
+        <h1>Main Content Section - heading elements also display block!</h1>
+        <article>
+          <h2>Article with 3 Sections</h2>
+          <section><h3>Section 1</h3></section>
+          <section><h3>Section 2</h3></section>
+          <section><h3>Section 3</h3></section>
+        </article>
+        <aside>
+          <h2>Sidebar</h2>
+        </aside>
+        <!-- add an invisible element to clear both so
+          that our wrapper div actually wraps around out content -->
+        <br class="clearfix" />
+      </main>
+      <footer><h3>Some footer text</h3></footer>
+    </div>
+  </body>
+</html>
