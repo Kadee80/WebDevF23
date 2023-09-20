@@ -1,0 +1,46 @@
+/* Import google font */
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+/* Font Family usage
+font-family: 'Kaushan Script', cursive;
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: url('../img/bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+ body {
+  font-family: 'Kaushan Script', cursive;
+ }
+
+ .container {
+  width: 900px;
+  margin: 0 auto;
+ }
+
+ .polaroid {
+  width: 240px;
+  display: inline-block;
+  margin: 20px;
+  position: relative;
+ }
+
+ .polaroid img {
+  width: 100%;
+  height: auto;
+  border: 10px solid cornsilk;
+  border-bottom-width: 45px;
+ }
+
+ .polaroid p {
+  position: absolute;
+  text-align: center;
+  width: 260px;
+  bottom: 14px;
+  color: #888;
+ }

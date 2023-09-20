@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Positioning</title>
+    <style type="text/css">
+      body {
+        font-family: 'Helvetica', Arial, sans-serif;
+        margin: 0;
+      }
+
+      ul {
+        /* remove all bullet points */
+        list-style-type: none;
+        overflow: hidden;
+        padding: 0;
+        background-color: #999;
+        /* make parent elements font size 0 because we a using inline block to stack our LI,
+        inline block stacks each element like a letter in a word or paragraph,
+        making the font size zero ensures no funky extra margins */
+        font-size: 0;
+      }
+
+      li {
+        display: inline-block;
+        /* 1 rem = 16px */
+        font-size: 1rem;
+      }
+
+      li a {
+        /* make sure the link's cliclkable area is larger than just the text */
+        display: block;
+        text-align: center;
+        width: 100px;
+        padding: 10px;
+        /* remove underline on the link text */
+        text-decoration: none;
+        /* change the link color */
+        color: #333;
+      }
+
+      li a.active {
+        background-color: #888;
+      }
+
+      li a:hover {
+        background-color: #111;
+        color: white;
+      }
+
+      /* Positioning */
+      nav.fixed-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+
+      #abs {
+        background-color: red;
+        width: 100px;
+        height: 100px;
+        overflow: hidden;
+
+        position: absolute;
+        top: 0;
+        left: 50%;
+
+        /* z-index: -100; */
+      }
+
+      #rel {
+        background-color: green;
+        width: 100px;
+        height: 100px;
+        overflow: hidden;
+
+        position: relative;
+        top: -100px;
+        right: -100px;
+      }
+
+      #rel-parent {
+        width: 500px;
+        height: 500px;
+        background-color: purple;
+
+        position: relative;
+      }
+
+      #abs-child {
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
+
+        position: absolute;
+        right: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="fixed-nav">
+      <ul>
+        <li><a href="#" class="active">Link 1</a></li>
+        <li><a href="#">Link 2</a></li>
+        <li><a href="#">Link 3</a></li>
+        <li><a href="#">Link 4</a></li>
+      </ul>
+    </nav>
+    <main>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ante
+        eros, bibendum ac urna vel, sodales consequat risus. Nullam id faucibus
+        est, sit amet dictum nibh. Duis eget erat justo. Proin nibh enim, dictum
+        consectetur nibh non, iaculis fringilla dui. Cras eleifend metus
+        efficitur magna pharetra, sagittis ultrices orci mollis. Pellentesque
+        efficitur est id nulla facilisis, eu efficitur nulla lobortis. Phasellus
+        aliquet, sapien porta finibus mattis, augue est molestie nulla, quis
+        ullamcorper elit turpis et dui. Suspendisse potenti. Nullam dignissim
+        pellentesque consectetur. Integer auctor aliquet nisi vel ornare.
+        Integer non felis a quam posuere fringilla. Curabitur commodo metus
+        diam, suscipit tristique sem egestas in. Fusce ligula sapien, feugiat eu
+        felis ut, ultrices tempor libero. Morbi at erat sagittis, sagittis orci
+        ac, semper justo. Nunc maximus sapien ut arcu dapibus ultrices id in
+        neque. Duis commodo, orci in volutpat laoreet, mi nisl mattis dolor, sit
+        amet aliquet orci ante a turpis.
+      </p>
+      <p>
+        Proin eu nisi egestas, tincidunt erat ut, pulvinar dolor. Curabitur
+        sollicitudin augue ut purus molestie, sed fermentum augue ullamcorper.
+        Donec nec lacinia lacus. Vivamus sed egestas erat. Nam aliquam ut nisi
+        et aliquam. In pretium leo eget velit venenatis iaculis. Nunc blandit
+        urna lorem, nec euismod leo tristique in. Integer eleifend, diam vel
+        feugiat pharetra, nunc nisi aliquam erat, porttitor faucibus enim velit
+        non urna. Maecenas eget purus dolor. Aenean in rutrum lectus. Sed
+        feugiat tellus nec purus volutpat, interdum aliquam mauris aliquam.
+      </p>
+      <p>
+        Pellentesque euismod nulla justo, ut dignissim lectus finibus at. Nulla
+        tempor mauris sem, in eleifend justo facilisis a. Nullam ut mollis orci.
+        Aliquam erat volutpat. Curabitur sit amet ligula justo. Fusce non
+        facilisis nisl. Vestibulum congue tristique nulla, ac tempor nisi
+        condimentum a. Vivamus convallis, lacus iaculis euismod aliquam, nulla
+        tortor ornare augue, ut fermentum tellus diam id ex. Curabitur vehicula
+        dignissim lectus et condimentum. Quisque vitae tincidunt erat.
+        Pellentesque ut consequat lectus.
+      </p>
+      <p>
+        Donec varius a elit non accumsan. Sed malesuada condimentum molestie.
+        Aliquam a pulvinar dui. Mauris nec dolor est. Nunc sed mattis turpis.
+        Aliquam fringilla maximus nulla a mollis. Phasellus auctor iaculis eros
+        euismod tincidunt. Vivamus scelerisque dui nisl, at dictum purus mattis
+        eget. Maecenas eget erat nunc. Pellentesque blandit justo id lacinia
+        tincidunt. Quisque aliquam nibh dui, sed aliquam elit laoreet
+        sollicitudin. Vestibulum ante ipsum primis in faucibus orci luctus et
+        ultrices posuere cubilia curae;
+      </p>
+      <p>
+        Suspendisse pellentesque in mauris non laoreet. Etiam vel nisi sit amet
+        orci malesuada scelerisque a eu mi. Vivamus a dignissim ex. Etiam eu
+        enim a nisl egestas volutpat vel non enim. Aliquam vitae enim vitae leo
+        interdum maximus. Proin in sapien id nibh tempor viverra eu in est. Cras
+        cursus maximus nulla, a consequat neque. Phasellus mi diam, commodo at
+        nunc sit amet, gravida varius nunc. Phasellus ligula augue, tristique ut
+        est id, rhoncus placerat dolor. Proin nunc urna, semper non tincidunt
+        non, facilisis faucibus quam. Fusce ex mi, lacinia eu lorem ut, viverra
+        consequat elit. Pellentesque habitant morbi tristique senectus et netus
+        et malesuada fames ac turpis egestas. Duis lacinia non urna in viverra.
+        Suspendisse sem lorem, mollis facilisis tincidunt at, pharetra quis ex.
+        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+        cubilia curae; Ut sed arcu tortor.
+      </p>
+      <div id="abs">
+        Absolute positioning with no parent positioning defined!
+      </div>
+      <div id="rel">
+        Relative positioned div with no parent positioning defined!
+      </div>
+
+      <div id="rel-parent">
+        <div id="abs-child"></div>
+      </div>
+    </main>
+  </body>
+</html>
