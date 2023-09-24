@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background: url(../img/bg.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    /*If you want it to work in IE*/
+    filter: progid: DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')";
+}
+/* NAVIGATION */
+
+/*  MAIN GALLERY*/
+.container{
+    width:900px;
+    margin:0 auto;
+    padding-top: 50px;
+}
+
+.polaroid {
+    position: relative;
+    width: 240px;
+    display: inline-block;
+    margin:20px;
+}
+
+.polaroid img {
+    width:100%;
+    height:auto;
+    border: 10px solid #FEF9EF;
+    border-bottom: 45px solid #FEF9EF;
+    /*h-shadow v-shadow | blur spread color*/
+    -webkit-box-shadow: 3px 3px 3px 3px rgba(10,10,10,0.5);
+    -moz-box-shadow: 3px 3px 3px 3px rgba(10,10,10,0.5);
+    box-shadow: 3px 3px 3px 3px rgba(10,10,10,0.5);
+}
+
+.polaroid p {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom: 10px;
+    font: 400 18px 'Kaushan Script', cursive;
+    color: #888;
+}
+
+/* TRANSFORMS */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
