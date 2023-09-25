@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&family=Open+Sans:wght@300;400&display=swap');
+
+/* font-family: 'Jua', sans-serif;
+font-family: 'Open Sans', sans-serif; */
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.card {
+  width: 50%;
+  border-radius: 20px;
+  padding: 1rem 2rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  
+  background: #FFF;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+img {
+  width: 30%;
+  height: auto;
+}
+
+.recipe_info {
+  margin-left: 1.5rem;
+}
+
+h2, h3{
+  font-family: 'Jua', sans-serif;
+  font-weight: 400;
+}
+
+h2 {
+  margin: 1rem 0;
+  font-size: 2.5rem;
+  border-bottom: .25rem solid  #48B2FF;
+}
+
+h3 {
+  margin: 0.5rem 0;
+  font-size: 1.5rem;
+  color: #48B2FF;
+}
+
+.recipe_details {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 1.5rem;
+}
+
+.ingredients_list {
+  width: 40%;
+}
+
+ul {
+  list-style-type: none;
+  padding-left:0;
+}
+
+ol {
+  padding-left: 1.25rem;
+}
+
+li {
+  margin-bottom: 0.75rem;
+}
+
+ul li {
+  display: flex;
+}
+
+ul li span {
+  display: block;
+}
+
+ul li span:first-child {
+  width: 35%;
+  margin-right: 1rem;
+}
+
+.instructions_list {
+  width: 55%;
+}
+
+
