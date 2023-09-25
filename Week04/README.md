@@ -1,6 +1,6 @@
 # HW - Due Monday, Week 5
 
-Next week you will be presenting you midterm project proposals to your classmates. Plan on showing a blog post and optional slideshow (or combination of the 2) describing a simple multipage (minimum of 3 pages) website. Blog post / slideshow should include:
+Next week you will be presenting you midterm project proposals to your classmates. Plan on showing a README.md post and optional slideshow (or combination of the 2) describing a simple multipage (minimum of 3 pages) website. README.md post / slideshow should include:
 
 * concept|theme of site (not just random images and links that show skill)
 * site map  and wireframes
