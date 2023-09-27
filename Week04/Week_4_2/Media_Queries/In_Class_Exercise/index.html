@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!-- Ensures proper responsive behavior -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Media Queries (and a little flexbox)</title>
+    <style type="text/css">
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Helvetica, Arial, sans-serif;
+        background-color: red;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+      /* Desktop first, apply our default styles for desktop and then override for smaller screens */
+
+      header.header-flex {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      h1 {
+        margin: 0;
+      }
+
+      .main-nav ul {
+        list-style-type: none;
+        display: flex;
+        padding: 0;
+      }
+
+      .main-nav li {
+        text-align: center;
+      }
+
+      .main-nav a {
+        display: block;
+        width: 3rem;
+        padding: 2rem;
+      }
+
+      .flex-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 2rem;
+      }
+
+      .space-between {
+        justify-content: space-between;
+        background-color: rgba(0, 255, 255, 0.5);
+      }
+
+      .space-around {
+        justify-content: space-around;
+        background-color: rgba(0, 100, 255, 0.5);
+      }
+
+      .thumb {
+        min-height: 10rem;
+        /* 4 thumbnails per row on desktop */
+        width: 23%;
+        background-color: blue;
+        border: 1px solid red;
+      }
+
+      /* Tablet Screen Sizes */
+      @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        body {
+          background-color: green;
+        }
+
+        .flex-container {
+          max-width: 1024px;
+          flex-wrap: wrap;
+        }
+        /* make our thumbnails stack 2 wide on tablet */
+        .thumb {
+          width: 48%;
+          margin: 1% 0;
+        }
+      }
+
+      /* Mobile Screen Sizes */
+      @media only screen and (max-width: 767px) {
+        body {
+          background-color: yellow;
+        }
+
+        .flex-container {
+          width: 100%;
+          padding: 0;
+          flex-direction: column;
+        }
+
+        .thumb {
+          width: 90%;
+          margin: 2rem 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header-flex">
+      <!-- Logo on the left -->
+      <h1 class="logo">Logo</h1>
+      <!-- Nav on the right -->
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#">Link 1</a></li>
+          <li><a href="#">Link 2</a></li>
+          <li><a href="#">Link 3</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Flex container with justifty content space between: 4 wide on desktop, 2 on tablet, 1 on mobile -->
+    <div class="flex-container space-between">
+      <div class="thumb">
+        <img src="https://placehold.co/600x400" alt="placeholder image" />
+      </div>
+      <div class="thumb">
+        <img src="https://placehold.co/600x400" alt="placeholder image" />
+      </div>
+      <div class="thumb">
+        <img src="https://placehold.co/600x400" alt="placeholder image" />
+      </div>
+      <div class="thumb">
+        <img src="https://placehold.co/600x400" alt="placeholder image" />
+      </div>
+    </div>
+    <!-- Flex container with justifty content space around: 4 wide on desktop, 2 on tablet, 1 on mobile -->
+    <div class="flex-container space-around">
+      <div class="thumb"></div>
+      <div class="thumb"></div>
+      <div class="thumb"></div>
+      <div class="thumb"></div>
+    </div>
+  </body>
+</html>
