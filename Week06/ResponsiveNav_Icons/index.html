@@ -9,6 +9,46 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+    <!-- list of icons https://fonts.google.com/icons -->
+    <!-- use in web: https://developers.google.com/fonts/docs/material_symbols#use_in_web -->
+    <style>
+      .material-icons {
+        font-size: 2rem;
+        color: black;
+      }
+    </style>
+    <script>
+      function toggleMenu() {
+        const el = document.getElementById('menu')
+        el.classList.toggle('open')
+      }
+    </script>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <h1 class="brand"><a href="#">Logo</a></h1>
+      <!-- This is the menu icon thats hidden by default on desktop and tablet sizes
+      but shown on mobile
+      spans display inline by default
+      -->
+      <span class="mobile-menu" onclick="toggleMenu()">
+        <!-- case sensitive USE ALL LOWERCASE -->
+        <span class="material-icons">menu</span>
+      </span>
+      <!-- main nav is always an unordered list of links -->
+      <nav>
+        <!-- menu class for styling, menu ID for javascript -->
+        <ul class="menu" id="menu">
+          <li><a href="#">Link 1</a></li>
+          <li><a href="#">Link 2</a></li>
+          <li><a href="#">Link 3</a></li>
+          <li><a href="#">Link 4</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div>
+      <span class="material-icons">star_rate</span>
+    </div>
+  </body>
 </html>

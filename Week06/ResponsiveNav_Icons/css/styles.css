@@ -1,0 +1,115 @@
+/* Global Styles */
+
+* {
+  /* boder box means is when i say width, that includes my borders and my padding */
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  color: #333;
+}
+
+/* Desktop First Styling */
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url(../img/grey_wash_wall.png);
+  padding: 0 2rem;
+  /* whenever we want to absolute position a child element
+  we need to relative position the parent */
+  position: relative;
+}
+
+.brand {
+  margin: 0;
+  font-weight: 200;
+}
+
+header a {
+  color: #AAA;
+  text-decoration: none;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+.menu {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+}
+
+.menu li a {
+  display: block;
+  padding: 1rem;
+}
+
+.menu li a:hover {
+  color: #EEE;
+  background-color: rgba(0,0,0,0.3);
+}
+
+/* Mobile */
+
+@media only screen and (max-width: 767px) {
+  body {
+    background-color: #AAA;
+  }  
+
+  header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    text-align: center;
+    padding: 0;
+  }
+
+  .brand {
+    margin: 0.5rem;
+  }
+
+  .mobile-menu {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    display: block;
+    font-size: 2rem;
+    color: #AAA;
+    cursor: pointer;
+  }
+
+  .menu {
+    flex-direction: column;
+    width: 100vw;
+    overflow: hidden;
+    height: 0;
+  }
+
+  .menu.open {
+    height: auto;
+  }
+
+  .menu li {
+    border-bottom: 1px solid #ee0606;
+
+  }
+
+}
+
+
+
