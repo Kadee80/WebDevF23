@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Toggle Styles</title>
+    <style type="text/css">
+      .active {
+        background-color: #006fff;
+        color: white;
+        font-size: 60px;
+      }
+    </style>
+    <script type="text/Javascript">
+      function toggleActive() {
+        // grab the element to change
+        var element = document.getElementById('changeMe')
+        // this one line does the adding and removing without the conditional
+        // becuase we are using a built in
+        // toggle('thing to toggle') function
+        // element.classList.toggle('active')
+
+        console.log(element)
+        // check if the element already has the class applied to it
+        // if so, remove it
+        if (element.classList.contains('active')) {
+          element.classList.remove('active')
+          // changing the content inside our <> </>
+          element.innerHTML = "I'm not active anymore"
+        } else{
+        // if not, add it
+        element.classList.add('active')
+        // changing the content inside our <> </>
+        element.innerHTML = "WHoo Hoo I'm now active"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1 id="changeMe" onclick="toggleActive()">
+      This is a header, click me to change my content
+    </h1>
+  </body>
+</html>

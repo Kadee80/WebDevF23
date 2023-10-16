@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Javascript Data Types</title>
+    <script type="text/Javascript">
+      // declare a variable
+      // works with all variable types
+      // var myVar;
+      // this one is for variables that will update/change over time
+      let myVar;
+      // this one is for a known constant value. Will NOT and can NOT change over time
+      // const myVar;
+      // assign a value
+      myVar = "number"
+      console.log("myVar's value is: ", myVar)
+
+      // we can also reassign a new value and new type to the same variable in JS
+      myVar = "8"
+      console.log(myVar)
+      console.log(typeof myVar)
+
+      // even though 8 is "8" in string quotes we can still do math with it
+      let myVar2 = myVar * 2
+      console.log(myVar2)
+      console.log(typeof myVar2)
+
+      // We can print a mixture of strings and variables
+      let temp = 54
+      console.log("Todays temperature is ", temp, " degrees F.")
+
+      // lets make a function!
+      // declare and define a function
+      // const notDeletable = "I can be used in a function or anywhere else because i am global!"
+
+      function sumVals(num1, num2){
+        // variable to kill outside of this function
+        const deletable = "I'm dead outside of here!"
+        // this global variable can bve used anywhere
+        //console.log(notDeletable)
+        var mySum = num1 + num2
+        console.log(mySum)
+        return mySum
+      }
+      // console.log(notDeletable)
+      // this will be undefined = doesnt exist because it was declared and scoped within a single function
+      // will throw and error and stops code execution
+      // console.log(deletable)
+
+      // execute a function
+      // sumVals(1234, 5678)
+      // wont work
+      // console.log(mySum)
+      // will work
+      let myAddedNum = sumVals(1234, 5678)
+      // mySum was returned by sumVals and assigned to a variable named myAddedNum
+      console.log(myAddedNum)
+      // This runs the function on the fly, prints the value but then this number cannot be accessed anywhere else
+      console.log(sumVals(1234, 5678))
+
+      //booleans and conditionals
+      let isOn = true;
+      // toggle between off and on
+
+      console.log(isOn)
+      console.log(typeof isOn)
+
+      function switchOnOff() {
+        if (isOn == true) {
+          console.log('isOn is currently ', isOn, ' Switching to false now' )
+          isOn = false
+        } else {
+          console.log('isOn is currently ', isOn, ' Switching to true now')
+          isOn = true
+        }
+      }
+
+      // switchOnOff()
+      // switchOnOff()
+
+
+      // a == 8
+      // a = 8 is true AND a = '8'
+      // a === 8
+      // a = 8 as a NUMBER is the only true
+
+      // loops increments
+
+      // i++ is shorthand for i = i + 1
+      // i-- is shorthand for i = i =1
+      // i+=3 is shorthand for i = i + 3
+
+      // BEWARE OF INFINITE LOOPS> YOUR STATMENT NEEDS TO EVENTUALLY EVAULATE TO FALSE TO EXIT
+
+      function countToN(n) {
+        // this is our loop
+        for (var i = 0; i <= n; i++ ) {
+          console.log(i)
+          // we use this when we want to iterate over an array or do something I number of times
+        }
+      }
+      // countToN(8)
+    </script>
+  </head>
+  <body>
+    <button onclick="sumVals(273654, 349867)">Call sumVals function</button>
+    <button onclick="switchOnOff()">Toggle On/Off</button>
+    <button onClick="countToN(25)">Count to 25</button>
+  </body>
+</html>
