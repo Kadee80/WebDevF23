@@ -2,9 +2,41 @@
 <html>
   <head>
     <title>Random Content using an array</title>
-    <script type="text/javascript"></script>
+    <script type="text/javascript">
+      var arrImg = [
+        'https://media.4-paws.org/a/4/8/b/a48b18270b120e60e9bd4783e9106940a2808acd/VIER%20PFOTEN_2013-07-19_024-3851x2665-1920x1329.jpg',
+        'https://cdn.britannica.com/18/137318-050-29F7072E/rooster-Rhode-Island-Red-roosters-chicken-domestication.jpg',
+        'https://media.4-paws.org/3/e/5/6/3e56785d2a08c27be3ca72082c20fd0a4545586d/VIER%20PFOTEN_2015-04-27_010-1927x1333-1920x1328.jpg',
+      ]
+
+      varLink = [
+        'https://en.wikipedia.org/wiki/Goat',
+        'https://en.wikipedia.org/wiki/Chicken',
+        'https://en.wikipedia.org/wiki/Cattle',
+      ]
+
+      // random helper function
+      // Math.random() returns a random floating point number between 0 and 1
+      // Math.round(num) return the rounded up or down value passed in as the first paramter
+      function randNum(max) {
+        var rn = Math.floor(max * Math.random())
+        return rn
+      }
+
+      function loadRandomImage() {
+        var index = randNum(arrImg.length)
+        var img = document.getElementById('dyn-img')
+        var link = document.getElementById('dyn-link')
+        img.src = arrImg[index]
+        link.href = arrLink[index]
+      }
+
+      document.addEventListener('DOMContentLoaded', loadRandomImage)
+    </script>
   </head>
   <body>
-    <a href="#" target="_blank" id="dyn-link"><img src="" id="dyn-img" /></a>
+    <a href="#" target="_blank" id="dyn-link">
+      <img src="" id="dyn-img" />
+    </a>
   </body>
 </html>

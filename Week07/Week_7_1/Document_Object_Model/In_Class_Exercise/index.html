@@ -4,6 +4,59 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Document Object Model</title>
+    <style type="text/CSS">
+      #content {
+        color: red;
+      }
+
+      @media only screen and (max-width: 767px) {
+        #content {
+          color: blue;
+        }
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <button onclick="addSingleP()">Add a single P using strings</button>
+    <button onclick="addMultiP(9)">
+      Add mutliple Ps the right way using DOM nodes
+    </button>
+
+    <div id="content">
+      <p>This is DOM dummy text that will be overwritten by innerHTML</p>
+    </div>
+
+    <script type="text/javascript">
+      // declare our content variable globally
+      // this will work globally becuase the script tag is after the body content
+      const content = document.getElementById('content')
+      console.log(content)
+
+      function addSingleP() {
+        content.innerHTML =
+          '<p>This is a poorly instantiated p tag using string trickery!<p/>'
+      }
+
+      // proper dynamic DOM
+      function addMultiP(num) {
+        // start our loop
+        for (var i = 0; i < num; i++) {
+          // create a p element node
+          var p = document.createElement('P')
+          // p = <p></p>
+          // create a text node to go inside our p node
+          var text = document.createTextNode(
+            'this is paragraph number ' + (i + 1)
+          )
+
+          //append the text to the p
+          p.appendChild(text)
+          // p.classList.add('newClass')
+          // var p = <p>this is paragraph number i</p>
+          //append the P to our content div
+          content.appendChild(p)
+        }
+      }
+    </script>
+  </body>
 </html>
