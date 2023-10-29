@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Simple Input</title>
+    <style type="text/css">
+      h1 {
+        text-transform: uppercase;
+      }
+
+      .red {
+        color: red;
+      }
+
+      .green {
+        color: green;
+      }
+
+      .blue {
+        color: blue;
+      }
+
+      .purple {
+        color: rebeccapurple;
+      }
+    </style>
+    <script type="text/javascript">
+      // declare our element variables globally
+      var myHeading
+      var myNumber
+      var myBtn
+
+      document.addEventListener('DOMContentLoaded', function () {
+        // on load is a great time to assign html element to variables
+        // and add other event listeners to element on the page
+        myHeading = document.getElementById('changeMe')
+        myNumber = document.getElementById('num')
+        myBtn = document.getElementById('changeBtn')
+
+        // add an onclick event listener to our button
+        myBtn.addEventListener('click', changeHeadingClass)
+      })
+
+      function changeHeadingClass() {
+        // take the value from the user's input (the element we stored as myNumber)
+        var n = myNumber.value
+        // inputs always come in a strings! grrr we cant check against numbers or do math here properly
+        console.log(typeof n)
+        // parse the number out of our string
+        n = parseInt(n)
+        console.log(typeof n)
+
+        // use switch statement to check which number was selected and apply the class accordingly
+        switch (n) {
+          case 0:
+            myHeading.className = 'red'
+            break
+          case 1:
+            myHeading.className = 'green'
+            break
+          case 2:
+            myHeading.className = 'blue'
+            break
+          case 3:
+            myHeading.className = 'purple'
+            break
+          default:
+            // this is what you do if it doesnt match any of the cases above
+            myHeading.innerHTML = 'Hey, we said a whole number between 0 and 3'
+            break
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1 id="changeMe">I will change based on the number the user picks</h1>
+    <form>
+      <fieldset>
+        <legend>Pick a number to change the heading</legend>
+        <label for="num">Number between 0 and 3</label>
+        <input
+          type="number"
+          name="num"
+          id="num"
+          min="0"
+          max="3"
+          step="1"
+          placeholder="0"
+        />
+        <button type="button" id="changeBtn">Click to change color!</button>
+      </fieldset>
+    </form>
+  </body>
+</html>
