@@ -1,4 +1,4 @@
-# HW - Due Monday, Week 10
+# HW - Due Wednesday, Week 09
 
 Read through the following W3 Schools tutorials. Make sure you have a grasp on basic math, assigment, loops and array manipulation. Come to class with any questions you have.
 
