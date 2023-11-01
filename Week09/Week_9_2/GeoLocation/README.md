@@ -1,4 +1,4 @@
-#HTML5 and Javascript Geolocation:
+# HTML5 and Javascript Geolocation:
 
 For this next example, we need to run a local server in order to access the browser’s geolocation settings. For those of you on PC, take a moment and download Brackets. Mac users, you can easily spin up a local server using terminal and a short python command, but you are welcome to use brackets if that feels more comfortable. I will demo how to use both moving forward.
 
