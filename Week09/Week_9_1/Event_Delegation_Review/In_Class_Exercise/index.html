@@ -1,77 +1,56 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Event Delegation Review</title>
+    <title>Event Delegation Teaser</title>
     <style type="text/css">
       img {
         display: block;
-        opacity: 1;
-        transition: all 2s ease-in-out;
-      }
-
-      #kitty {
-        border: 2px solid pink;
       }
 
       .hidden {
         display: none;
-        opacity: 0;
       }
 
       .active {
         color: red;
       }
-
-      div {
-        border: 1px solid green;
-      }
     </style>
     <script type="text/javascript">
-      // waits for the DOM content to load before executing the following
-      // in this example the callback function is anonymous aka cannot be called anywhere else in our code
-      // we are also going to take a look at the event that is returned with event listeners today
+      // Wait for the DOM to load completely before executing certain lines of code
+      // in this example the callback function is anonymous,
+      // aka happens here but cant be called again elsewhere
       document.addEventListener('DOMContentLoaded', function () {
-        document
-          .getElementById('hide')
-          .addEventListener('click', hideKitten(event))
+        console.log('locked and loaded')
+        // add event listeners once we are loaded
+
+        document.getElementById('hide').addEventListener('click', hideKitten)
 
         document
           .getElementById('eventh1')
           .addEventListener('mouseover', function (event) {
             console.log(event)
-            // we need the target of the exact element it happened to
             console.log(event.target)
-            // store the element the event happened to as a variable
-            var el = event.target
+            el = event.target
+
             el.classList.toggle('active')
           })
       })
 
-      // const hideKitten = () => {... do stuff in here}
-
-      function hideKitten(event) {
-        var targetBtn = document.getElementById('hide')
-
+      function hideKitten() {
         var kitty = document.getElementById('kitty')
         kitty.classList.toggle('hidden')
-
-        if (kitty.classList.contains('hidden')) {
-          targetBtn.innerHTML = 'SHOW'
-        } else {
-          targetBtn.innerHTML = 'HIDE'
-        }
       }
     </script>
   </head>
   <body>
     <h1 id="eventh1">
-      This H1 is here to be moused over so we can look at the event object.
+      This H1 is here to be moused over and we can see the event object
     </h1>
     <button id="hide">HIDE</button>
     <div>
       <img
         src="https://placekitten.com/400/400"
-        alt="adorable kitten"
+        alt="Adorable Kitten"
         id="kitty"
       />
     </div>
