@@ -14,7 +14,7 @@ If you choose this option – you MUST add in enough new features for it to qual
 
 - Site should be a completed site for final, no missing pages.
 
-- Add in some sort of custom javascript, jquery outside of bootstrap defaults. Attempt to implement an external javascript framework.
+- Add in some sort of custom javascript outside of bootstrap defaults. Attempt to implement an external javascript framework.
 
 ### All New Website Idea:
 
