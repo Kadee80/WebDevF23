@@ -4,9 +4,86 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Loading Google Maps</title>
+    <style>
+      /* Styling needed for height and width for map to show up */
+      #map {
+        width: 100vw;
+        height: 100vh;
+      }
+    </style>
+    <script>
+      ;((g) => {
+        var h,
+          a,
+          k,
+          p = 'The Google Maps JavaScript API',
+          c = 'google',
+          l = 'importLibrary',
+          q = '__ib__',
+          m = document,
+          b = window
+        b = b[c] || (b[c] = {})
+        var d = b.maps || (b.maps = {}),
+          r = new Set(),
+          e = new URLSearchParams(),
+          u = () =>
+            h ||
+            (h = new Promise(async (f, n) => {
+              await (a = m.createElement('script'))
+              e.set('libraries', [...r] + '')
+              for (k in g)
+                e.set(
+                  k.replace(/[A-Z]/g, (t) => '_' + t[0].toLowerCase()),
+                  g[k]
+                )
+              e.set('callback', c + '.maps.' + q)
+              a.src = `https://maps.${c}apis.com/maps/api/js?` + e
+              d[q] = f
+              a.onerror = () => (h = n(Error(p + ' could not load.')))
+              a.nonce = m.querySelector('script[nonce]')?.nonce || ''
+              m.head.append(a)
+            }))
+        d[l]
+          ? console.warn(p + ' only loads once. Ignoring:', g)
+          : (d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)))
+      })({
+        // Your API KEY. DO not publish to github!
+        //  API Keys can be found at Keys and Credentials
+        key: 'YOUR_API_KEY_HERE',
+        v: 'weekly',
+        // Use the 'v' parameter to indicate the version to use (weekly, beta, alpha, etc.).
+        // Add other bootstrap parameters as needed, using camel case.
+      })
+    </script>
+    <script>
+      async function initMap() {
+        // Request needed libraries.
+        const {Map} = await google.maps.importLibrary('maps')
+        const {AdvancedMarkerElement} = await google.maps.importLibrary(
+          'marker'
+        )
+        const map = new Map(document.getElementById('map'), {
+          // copy paste lat lon from geolocation example to start
+          center: {lat: 40.9592695, lng: -72.5748339},
+          // mess with zoom factor with them
+          zoom: 14,
+          //  map id from: Map Management
+          // go to map styles to create a new map style and associate it with this map id
+          mapId: '32f409fbf351817b',
+        })
+        // Add a marker
+        const marker = new AdvancedMarkerElement({
+          map,
+          // copy paste lat lon from geolocation example
+          position: {lat: 40.9592695, lng: -72.5748339},
+        })
+      }
 
+      initMap()
+    </script>
   </head>
   <body>
-
+    <!-- We need an html element to append our map to. This element needs dimensions! -->
+    <div id="map"></div>
   </body>
 </html>
