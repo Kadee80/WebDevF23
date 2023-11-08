@@ -12,11 +12,190 @@
     />
     <!-- Add custom styles AFTER Bootstrap CSS
       either as a style tag or a link to an external stylesheet -->
+    <style>
+      /* give our divs a background color so we can seem them, and see them nest */
+      div {
+        background-color: rgba(0, 0, 255, 0.1);
+        border-radius: 1rem;
+        min-height: 100px;
+      }
+      /* add some margins to the top of our divs that act as rows for further clarity */
+      .row {
+        margin-top: 1rem;
+        min-height: 200px;
+      }
 
-
+      .row-custom {
+        min-height: 300px;
+      }
+    </style>
   </head>
   <body>
+    <h1>Bootstrap Grid System Examples</h1>
 
+    <p>
+      container with max width, one row, columns decided by number of col class
+      divs
+    </p>
+    <div class="container text-center">
+      <div class="row">
+        <div class="col">Column 1</div>
+        <div class="col">Column 2</div>
+        <div class="col">Column 3</div>
+      </div>
+    </div>
+    <p>
+      fluid container which means always 100% width, one row, columns decided by
+      number of col class divs
+    </p>
+
+    <div class="container-fluid text-center">
+      <div class="row">
+        <div class="col">Column 1</div>
+        <div class="col">Column 2</div>
+        <div class="col">Column 3</div>
+      </div>
+    </div>
+
+    <div class="container text-center">
+      <div class="row">
+        <div class="col">Column 1</div>
+        <div class="col">Column 2</div>
+      </div>
+
+      <div class="row">
+        <div class="col">Column 1</div>
+        <div class="col">Column 2</div>
+        <div class="col">Column 3</div>
+      </div>
+
+      <div class="row">
+        <div class="col">Column 1</div>
+        <div class="col">Column 2</div>
+        <div class="col">Column 3</div>
+        <div class="col">Column 4</div>
+      </div>
+    </div>
+
+    <div class="container text-center">
+      <div class="row">
+        <div class="col">Column figure out whats left</div>
+        <div class="col-6">Column take up 6/12 columns in our grid system</div>
+        <div class="col">Column figure out whats left</div>
+      </div>
+
+      <div class="row">
+        <div class="col">Column figure out whats left</div>
+        <div class="col-5">Column 5/12 columns wide</div>
+        <div class="col">Column figure out whats left</div>
+      </div>
+    </div>
+    <!-- Using infixes and multiple classes to apply different layout behavior at different breakpoints -->
+    <p>
+      Stack the columns on mobile by making one full width, and the other half
+      width. Remember, the breakpoint chart! col-md-8 means be 100% wide until
+      we hit our medium breakpoint, then take up 8/12 columns. col-6 col-md-4
+      means take up 6/12 by default, UNTIL WE HIT OUR MEDIUM BREAKPOINT, and
+      then make it 4/12. So, 8 + 4 = 12 and both olf these cols can exist in a
+      single row on larger screens, but will stack on smaller.
+    </p>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">.col-md-8</div>
+        <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+      </div>
+    </div>
+
+    <div class="container">
+      <p>
+        Columns are 50% or 6/12 wide on mobile, once we hit our -md breakpoint
+        we are going to say out columns should take up 33% or 4/12 wide each
+      </p>
+      <div class="row">
+        <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+        <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+        <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+      </div>
+      <p>Columns are always 50% wide, regardless of hitting any breakpoints</p>
+      <div class="row">
+        <div class="col-6 col-md-12">.col-6 .col-md-12</div>
+        <div class="col-6">.col-6</div>
+        <div class="col-6">.col-6</div>
+        <div class="col-6">.col-6</div>
+      </div>
+    </div>
+
+    <div class="container">
+      <p>row-cols-4 = default width is 4/12</p>
+      <div class="row row-cols-4">
+        <div class="col">column</div>
+        <div class="col">column</div>
+        <div class="col">column</div>
+        <div class="col">column</div>
+        <div class="col">column</div>
+      </div>
+    </div>
+
+    <h2>Flexbox Atomic Style</h2>
+
+    <p>align-items-start = {align-items: flex-start;}</p>
+    <div class="container text-center">
+      <div class="row row-custom align-items-start">
+        <div class="col">Col 1</div>
+        <div class="col">Col 2</div>
+        <div class="col">Col 3</div>
+      </div>
+    </div>
+
+    <p>align-items-center = {align-items: center;}</p>
+    <div class="container text-center">
+      <div class="row row-custom align-items-center">
+        <div class="col">Col 1</div>
+        <div class="col">Col 2</div>
+        <div class="col">Col 3</div>
+      </div>
+    </div>
+
+    <p><align-items-end></align-items-end> = {align-items: flex-end;}</p>
+    <div class="container text-center">
+      <div class="row row-custom align-items-end">
+        <div class="col">Col 1</div>
+        <div class="col">Col 2</div>
+        <div class="col">Col 3</div>
+      </div>
+    </div>
+
+    <p>align-self-start: {align-self: flex-start;}... etc</p>
+    <div class="container text-center">
+      <div class="row row-custom">
+        <div class="col align-self-start">Col 1</div>
+        <div class="col align-self-center">Col 2</div>
+        <div class="col align-self-end">Col 3</div>
+      </div>
+    </div>
+
+    <h2>padding and gutters</h2>
+
+    <div class="container-fluid overflow-hidden text-center">
+      <div class="row gx-5">
+        <div class="col">
+          <div class="p-3">custom column padding</div>
+        </div>
+        <div class="col">
+          <div class="p-3">custom column padding</div>
+        </div>
+      </div>
+    </div>
+
+    <h2>Offsets</h2>
+
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-md-4">col-md-4</div>
+        <div class="col-md-4 offset-md-4">col-md-4 offset-md-4</div>
+      </div>
+    </div>
 
     <!-- We dont need JS for todays example,
       but when you include it, do so right before the closing body tag -->
