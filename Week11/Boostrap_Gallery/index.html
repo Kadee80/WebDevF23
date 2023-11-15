@@ -11,11 +11,202 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"
     />
+    <style>
+      .carousel-indicators [data-bs-target] {
+        background-color: transparent;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        text-indent: 0;
+        color: red;
+      }
+
+      .carousel-caption {
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+
+      .carousel-caption h5 {
+        text-transform: uppercase;
+        color: yellow;
+      }
+
+      .carousel-caption p {
+        font-style: italic;
+      }
+    </style>
+
     <title>Bootstrap Slider</title>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
   </head>
   <body class="p-0 m-0 border-0">
+    <!-- BOOTSTRAP NAVBAR -->
+    <div class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a href="#" class="navbar-brand">Nicolas Cage Free Eggs</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="#navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle Navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNavDropdown"
+        >
+          <ul class="navbar-nav align-self-end px-4">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"
+                >Chickens</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Eggs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Ducks</a>
+            </li>
+            <!-- Begin dropdown menu item -->
+            <li class="nav-item dropdown">
+              <a
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                class="nav-link dropdown-toggle"
+              >
+                Breeds
+              </a>
+              <!-- dropdown-menu-end fixes the alignment  -->
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#">Americauna</a></li>
+                <li><a class="dropdown-item" href="#">Mille Fleur</a></li>
+                <li><a class="dropdown-item" href="#">SeaBright</a></li>
+                <li><a class="dropdown-item" href="#">Silkie</a></li>
+              </ul>
+            </li>
+            <!-- End dropdown menu item -->
+          </ul>
+        </div>
+      </div>
+    </div>
 
+    <!-- CAROUSEL -->
+    <div id="chickenCarousel" class="carousel slide">
+      <!-- Indicators -->
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#chickenCarousel"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        >
+          <i class="bi-alarm"></i>
+        </button>
+        <button
+          type="button"
+          data-bs-target="#chickenCarousel"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        >
+          <i class="bi-alarm"></i>
+        </button>
+        <button
+          type="button"
+          data-bs-target="#chickenCarousel"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        >
+          <i class="bi-alarm"></i>
+        </button>
+
+        <button
+          type="button"
+          data-bs-target="#chickenCarousel"
+          data-bs-slide-to="3"
+          aria-label="Slide 4"
+        >
+          <i class="bi-alarm"></i>
+        </button>
+      </div>
+      <!-- End Indicators -->
+      <!-- Begin Image Slides -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="https://placekitten.com/950/600"
+            class="d-block w-100"
+            alt="..."
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>First slide label</h5>
+            <p>Some representative placeholder content for the first slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://placekitten.com/1000/600"
+            class="d-block w-100"
+            alt="..."
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Second slide label</h5>
+            <p>Some representative placeholder content for the second slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://placekitten.com/1100/600"
+            class="d-block w-100"
+            alt="..."
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Third slide label</h5>
+            <p>Some representative placeholder content for the third slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://placekitten.com/1100/650"
+            class="d-block w-100"
+            alt="..."
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>FOURTH slide label</h5>
+            <p>THIS IS THE NEW SLIDE WE ADDED.</p>
+          </div>
+        </div>
+      </div>
+      <!-- End Image Slides -->
+      <!-- Begin Prev/Next Buttons -->
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#chickenCarousel"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#chickenCarousel"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- END Prev/Next Buttons -->
+    <!-- OTHER COMPONENTS -->
   </body>
 </html>
