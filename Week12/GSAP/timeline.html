@@ -22,12 +22,49 @@
       }
     </style>
   </head>
+
   <body>
-    <!-- 
+    <div class="progress"></div>
+    <div id="page-wrap">
+      <h2>Hello Green Sock</h2>
+      <h2>You're Awesome</h2>
+      <p id="description">
+        I just made my first timeline and thats pretty cool!
+      </p>
+    </div>
+    <!--
       Older free without subscription versions
       https://github.com/greensock/GSAP
     -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
-    <script type="text/javascript"></script>
+
+    <script type="text/javascript">
+      document.addEventListener('DOMContentLoaded', function () {
+        // grab our elements and store them as variables
+        const headers = document.getElementsByTagName('H2')
+        const hello = headers[0]
+        const awesome = headers[1]
+        const text = document.getElementById('description')
+        const progress = document.getElementsByClassName('progress')[0]
+        const bg = document.getElementById('page-wrap')
+
+        var tl = new TimelineLite()
+
+        tl.from(bg, 0.5, {opacity: 0})
+          .from(hello, 0.5, {
+            left: -500,
+            opacity: 0,
+          })
+          .from(awesome, 0.5, {right: -1000, opacity: 0})
+          .from(text, 1.0, {bottom: -1000, opacity: 0})
+          .from(
+            progress,
+            tl.duration(),
+            {scaleX: 0, transformOrigin: 'left', ease: Linear.easeNone},
+            0
+          )
+          .to(progress, 0.2, {opacity: 0, top: -8})
+      })
+    </script>
   </body>
 </html>
