@@ -1,7 +1,7 @@
-# No Class MONDAY NOVEMBER 27
+# HW: Keep working on your final websites!
 
-Due to illness, there will be no class Monday, November 27.
+## PSA Class Monday, December 4
 
-Continue to work on your final websites!
+Next Monday's class (Week13 Dec 4) is an optional class. I will be opening up the entire class time as office hours since I know many of you have had scheduling conflicts with the regularly scheduled office hour times.
 
-See you Wednesday, November 29!
+Like I said, class is optional. I will not be taking attendance. You may come and use the time to work and ask a question as they arise, or come in with a question you know you have ahead of time.
