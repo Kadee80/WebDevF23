@@ -29,7 +29,7 @@ Today we will be building a responsive navbar using SASS. [SASS](http://sass-lan
 As an alternative to the command line, we can use an 
 [online SASS compliler](https://www.sassmeister.com/) for todays lesson.
 
-###Install SASS using command line:
+### Install SASS using command line:
 
 ```bash
 gem install sass
