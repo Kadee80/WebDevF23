@@ -1,5 +1,4 @@
-# Final Project Presentations Will Take Place 
-WEDNESDAY DECEMBER 13
+# Final Project Presentations Will Take Place WEDNESDAY DECEMBER 13
 
 ## MONDAY DECEMBER 11 class will be opened up as office hours.
 
