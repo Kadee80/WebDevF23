@@ -1,6 +1,6 @@
-We will be taking a look at SASS and how we can create our own framework from scratch this Thursday. (Boostrap uses SASS)
+We will be taking a look at SASS and how we can create our own framework from scratch. (Boostrap uses SASS)
 
-[Install Ruby](https://www.ruby-lang.org/en/documentation/installation/) on your computers before Thursdays's class.
+[Install Ruby](https://www.ruby-lang.org/en/documentation/installation/) on your computers 
 [Install SASS](http://sass-lang.com/install)
 
 ### Install SASS using command line:
