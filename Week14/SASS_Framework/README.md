@@ -26,7 +26,7 @@ sass -v
 
 Today we will be building a responsive navbar using SASS. [SASS](http://sass-lang.com/) is a Ruby Gem we need to [install on our computer](http://sass-lang.com/install). Today we will just be compiling our stylesheets using SASS command line. However, when working on a Ruby on Rails project, I much prefer to use [Compass](http://compass-style.org/) to watch and compile my stylesheets in the background.
 
-As an alternative to the command line, we can use an[online SASS compliler](https://www.sassmeister.com/) for todays lesson.
+As an alternative to the command line, we can use an [online SASS compliler](https://www.sassmeister.com/) for todays lesson.
 
 ###Install SASS using command line:
 
