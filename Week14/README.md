@@ -1,8 +1,8 @@
-## Final Project Presentations Will Take Place WEDNESDAY DEC 13
+# Final Project Presentations Will Take Place WEDNESDAY DECEMBER 13
 
-## MONDAY DEC 11 class will be opened up as office hours.
+## MONDAY DECEMBER 11 class will be opened up as office hours.
 
-In order for your project to be considered complete for grading you will be **required to submit the following by 8pm FRIDAY DEC 15**
+In order for your project to be considered complete for grading you will be **required to submit the following by 8pm FRIDAY DEC 22**
 
 1. In Class Presentation
 2. README.md documentation
