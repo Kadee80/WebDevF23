@@ -1,0 +1,19 @@
+@import 'util';
+
+//import this set style sheet after we write our vars and grid
+@import 'components/navigation';
+
+* {
+  font-family: $sans;
+}
+
+p {
+  line-height: $baseline;
+  font-size: $basesize;
+  margin-bottom: $baseline;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
