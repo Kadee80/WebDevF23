@@ -17,3 +17,58 @@ img {
   width: 100%;
   height: auto;
 }
+
+section.visible-grid {
+  @include container();
+  padding-top: 100px;
+
+  div.wrapper {
+    @include grid-row();
+    aside {
+      @include grid-col(3);
+      ul {
+        list-style-type: none;
+        font-size: $basesize;
+        li {
+          height: $baseline * 3;
+          background-color: $dark-bg;
+          line-height: $baseline * 3;
+          border-bottom: 1px solid white;
+          transition: all 1s ease;
+          a {
+            color: $light-bg;
+            text-align: center;
+            display: block;
+            text-decoration: none;
+            font-family: $sans;
+            font-weight: $font-weight-light;
+          }
+          &:hover {
+            background-color: lighten($dark-bg, 10%);
+          }
+        }
+      }
+    }
+    article {
+      @include grid-col(9);
+      p {
+        color: $primary-font;
+      }
+    }
+  }
+}
+
+section.row-bg {
+  @include grid-row();
+  background-color: $secondary-brand;
+
+  div.wrapper {
+    @include container();
+    div.grid-demo {
+      @include grid-col(2);
+      // &:first-child{
+      //   @include grid-col(2, $first: true);
+      // }
+    }
+  }
+}

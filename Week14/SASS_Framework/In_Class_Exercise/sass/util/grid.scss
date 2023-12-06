@@ -1,4 +1,4 @@
-@import "vars";
+@import 'vars';
 
 // variables for our grid math
 $grid-columns: 12;
@@ -6,8 +6,8 @@ $grid-max-width: 90%;
 $gutter: 1%;
 
 // breakpoints
-$breakpoint-mobile: 'only screen and (max-width: 768px), only screen and (max-device-width: 768px)';
-$breakpoint-medium: 'only screen and (min-width: 768px), only screen and (min-device-width: 768px)';
+$breakpoint-mobile: 'screen and (max-width: 768px), screen and (max-device-width: 768px)';
+$breakpoint-medium: 'screen and (min-width: 768px), screen and (min-device-width: 768px)';
 
 @mixin border-box {
   -webkit-box-sizing: border-box;
@@ -16,22 +16,24 @@ $breakpoint-medium: 'only screen and (min-width: 768px), only screen and (min-de
   box-sizing: border-box;
 }
 
-*, *:before, *:after{
+*,
+*:before,
+*:after {
   @include border-box;
 }
 
-@mixin grid-row(){
+@mixin grid-row() {
   width: 100%;
   *zoom: 1;
 
   &:before,
-  &:after{
+  &:after {
     content: '';
     display: table;
   }
 
   &:after {
-    clear:both;
+    clear: both;
   }
 }
 
@@ -39,19 +41,19 @@ $breakpoint-medium: 'only screen and (min-width: 768px), only screen and (min-de
   width: 96%;
   margin: 0 auto;
   font-size: $basesize;
-  @media #{$breakpoint-medium}{
+  @media #{$breakpoint-medium} {
     width: $grid-max-width;
   }
 }
 
-@mixin grid-col($col, $align: top, $first: false, $last: false){
+@mixin grid-col($col, $align: top, $first: false, $last: false) {
   width: 98%;
   display: block;
   font-size: $basesize;
   padding: 1%;
   margin: 0;
   vertical-align: top;
-  @media #{$breakpoint-medium}{
+  @media #{$breakpoint-medium} {
     display: inline-block;
     // calculate width in percentage using percentage function and our total number of columns var
     width: percentage($col/$grid-columns);
@@ -63,6 +65,3 @@ $breakpoint-medium: 'only screen and (min-width: 768px), only screen and (min-de
     margin-right: -4px;
   }
 }
-
-
-
