@@ -9,13 +9,13 @@ We will be taking a look at SASS and how we can create our own framework from sc
 ### Install SASS using command line:
 
 ```bash
-gem install sass
+npm install -g sass
 ```
 
 If it does not install, and you receive an error you need to install as admin on your computer. `sudo` will always prompt you for your computers password:
 
 ```bash
-sudo gem install sass
+sudo npm install -g sass
 ```
 
 Check your version and confirm SASS is installed:
